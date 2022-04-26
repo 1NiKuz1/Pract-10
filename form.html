@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Simple Starter</title>
+	<meta name="description" content="Simple Starter Description">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/preview.jpg">
+
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+
+</head>
+
+<body>
+
+	<article class="form-container">
+		<form id="SecondForm">
+
+			<fieldset class="form-add" id="FormAdd">
+				<div class="container-md">
+					<div class="row">
+						<div class="col-6 form-add__elem">
+							<h5>Введите название предмета</h5>
+							<input id="AddSubject" name="AddSubject" type="text">
+							<button id="ButtonAddSubject" class="button">Добавить предмет для группы</button>
+						</div>
+						<div class="col-6 form-add__elem">
+							<h5>Введите фамилию и имя студента</h5>
+							<input id="AddStudent" name="AddStudent" type="text">
+							<button id="ButtonAddStudent" class="button">Добавить студента в группу</button>
+						</div>
+					</div>				
+				</div>			
+			</fieldset>
+		
+			<fieldset class="form-mark" id="FormMark">
+				<div class="container">
+					<div class="row">
+	
+						<div class="col-md-3 col-sm-6 form-mark-elem">
+							<h5>Список групп</h5>										
+							<label><input type="radio" id="group" name="group" value="0" checked> 3ПР7</label>
+							<label><input type="radio" id="group" name="group" value="1"> 4ПР6</label>
+							<label><input type="radio" id="group" name="group" value="2"> 3КС2</label>
+						</div>
+			
+						<div class="col-md-3 col-sm-6 form-mark-elem">
+							<h5>Список предметов</h5>				
+							<select name="ListSubjects" id="ListSubjects" size="5">
+							</select>
+						</div>
+			
+						<div class="col-md-3 col-sm-6 form-mark-elem">
+							<h5>Список студентов</h5>				
+							<select name="ListStudents" id="ListStudents" size="5">
+							</select>
+						</div>
+			
+						<div class="col-md-3 col-sm-6 form-mark-elem">
+							<h5>Список оценок</h5>				
+							<select name="ListMarks" id="ListMarks" size="4">
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+						</div>
+	
+					</div>
+				</div>
+				<div class="container-fluid footer-container">
+					<div class="row">
+						<div class="col-lg-3 col-sm-6">
+							<button class="button">Сброс</button>
+							<button disabled id="SetMark" class="button">Выставить оценку</button>
+						</div>
+	
+						<div class="col-lg-3 col-sm-6">
+							<p>Вкл/Выкл Добавление</p>
+							<input id="OpenClouseAddFielDset" type="checkbox">
+						</div>
+	
+						<div class="col-lg-3 col-sm-6">
+							<p id="User">Вы вошли как: </p>
+						</div>
+	
+						<div class="col-lg-3 col-sm-6">
+							<a class="personal-akk" href="./persAccount.html">Перейти в личный кабинет</a>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+
+		</form>
+		
+	</article>
+
+	
+
+	<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+	<script type="module" src="js/mainForm.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,285 @@
+/* USER VARIABLES SECTION */
+
+:root {
+	--accent: rgb(255, 165, 0);
+	--bg-light: #fafafa;
+	--text: #333;
+	--border-form: 1px solid rgb(209, 209, 209);
+	;
+	--regular-text: 16px;
+	--lineheight: 1.65;
+	--userfont: roboto-st, sans-serif;
+	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+}
+
+/* BOOTSTRAP SETTINGS SECTION */
+
+/* gutter 20px (10px + 10px). Comment this code for default gutter start at 1.5rem (24px) wide. */
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+	--bs-gutter-x: .625rem;
+}
+
+.row,
+.row>* {
+	--bs-gutter-x: 1.25rem;
+}
+
+/* FONTS LOAD SECTION */
+
+@font-face {
+	src: url("../fonts/roboto-regular-webfont.woff2") format("woff2");
+	font-family: "roboto-st";
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	src: url("../fonts/roboto-italic-webfont.woff2") format("woff2");
+	font-family: "roboto-st";
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	src: url("../fonts/roboto-bold-webfont.woff2") format("woff2");
+	font-family: "roboto-st";
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	src: url("../fonts/roboto-bolditalic-webfont.woff2") format("woff2");
+	font-family: "roboto-st";
+	font-weight: 700;
+	font-style: italic;
+}
+
+/* GENERAL CSS SETTINGS */
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: var(--accent);
+	color: #fff;
+}
+
+input,
+textarea {
+	outline: none;
+}
+
+input:focus:required:invalid,
+textarea:focus:required:invalid {
+	border-color: red;
+}
+
+input:required:valid,
+textarea:required:valid {
+	border-color: green;
+}
+
+body {
+	font-family: var(--userfont);
+	font-size: var(--regular-text);
+	line-height: var(--lineheight);
+	color: var(--text);
+	background-color: var(--bg-light);
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.error {
+  width: 100%;
+  padding: 0;
+	font-size: 14px;
+  color: red;
+}
+
+.button {
+	padding: 10px 30px;
+	margin-top: 20px;
+	border: none;
+	background: var(--accent);
+	color: var(--bg-light);
+}
+
+.button:hover {
+	background: rgb(247, 176, 46);
+}
+
+.button:disabled {
+	background: rgb(150, 135, 108);
+}
+
+/* First form  */
+
+.form-cont {
+	text-align: center;
+}
+
+.form {
+	margin-top: 20px;
+	border-radius: 10px;
+	padding: 40px 60px;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 10px;
+	border: var(--border-form);
+}
+
+.form label,
+input {
+	width: 60%;
+}
+
+.form input {
+	border: 1px solid rgb(133, 131, 131);
+	border-radius: 3px;
+	padding: 5px 5px;
+}
+
+.form input.button {
+	border: none;
+	border-radius: 0;
+	padding: 10px 30px;
+	width: auto;
+}
+
+.form button:hover {
+	background: rgb(247, 176, 46);
+}
+
+/* Second form  */
+
+.form-container {
+	position: relative;
+	top: 30px;
+	left: 50%;
+	max-width: 992px;
+	transform: translateX(-50%);
+}
+
+.form-container h5 {
+	margin-bottom: 10px;
+}
+
+/* FormAdd  */
+
+.form-add {
+	position: relative;
+	padding: 30px 0;
+	background-color: var(--bg-light);
+	border: var(--border-form);
+	border-radius: 10px;
+}
+
+.form-add::before {
+	content: 'Добавление';
+	position: absolute;
+	top: 0;
+	left: 20px;
+	padding: 0 5px;
+	font-size: 24px;
+	background: var(--bg-light);
+	transform: translateY(-55%);
+}
+
+.form-add__elem {
+	text-align: center;
+}
+
+.form-add__elem h5 {
+	margin-bottom: 10px;
+}
+
+.form-add__elem input {
+	border: 1px solid rgb(133, 131, 131);
+	border-radius: 3px;
+	padding: 5px 5px;
+}
+
+/* FormMark  */
+
+.form-mark {
+	position: relative;
+	top: 30px;
+	padding-top: 30px;
+	background-color: var(--bg-light);
+	border: var(--border-form);
+	border-radius: 10px;
+}
+
+.form-mark::before {
+	content: 'Выставление оценки';
+	position: absolute;
+	top: 0;
+	left: 20px;
+	padding: 0 5px;
+	font-size: 24px;
+	background: var(--bg-light);
+	transform: translateY(-55%);
+}
+
+.form-mark-elem {
+	text-align: center;
+}
+
+.form-mark-elem h5 {
+	margin-bottom: 10px;
+}
+
+.form-mark-elem select {
+	max-width: 90%;
+	min-width: 100px;
+	padding: 0 5px;
+	overflow-x: auto;
+}
+
+.form-mark-elem input[type="radio"i] {
+	width: 13px;
+}
+
+.form-mark-elem label {
+	display: block;
+}
+
+/* Footer FromMark */
+
+.footer-container {
+	margin-top: 40px;
+	padding: 20px 10px;
+	background-color: #333;
+	border-radius: 0 0 10px 10px;
+	color: var(--bg-light);
+}
+
+.footer-container .button {
+	padding: 5px 20px;
+}
+
+.footer-container p {
+	margin: 0;
+}
+
+.personal-akk {
+	color: var(--bg-light);
+	padding: 5px 20px;
+	text-decoration: none;
+	background: var(--accent);
+	white-space: nowrap;
+}
+
+.personal-akk:hover {
+	color: var(--bg-light);
+	background: rgb(247, 176, 46);
+}
